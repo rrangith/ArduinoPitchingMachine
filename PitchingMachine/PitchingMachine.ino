@@ -26,6 +26,7 @@ void setup() {
 
 
 void loop() {
+  //randomize(); uncomment this to select random speeds
   if (Serial.available()){
     
     int speed = Serial.parseInt(); //gets speed
@@ -43,16 +44,16 @@ void loop() {
   }
 }
 
-/*void loop(){ //added functionality for randomization
+/*void radomize(){ //added functionality for randomization
     
     
    
-        int speed = random(0, 200);
-        Serial.println(speed);
-         runA(speed);
-         runB(speed);
-         int timeDelay = random(1, 5);
-         delay(timeDelay*1000);
+        int speed = random(0, 255); //chooses a random speed from 0 to 255
+        Serial.println(speed); //prints the speed to the GUI
+        runA(speed); //runs motor
+        runB(speed); //runs motor
+        int timeDelay = random(1, 5); //randomizes the delay 
+        delay(timeDelay*1000); //1000 is 1 second
          
 
 }*/
